@@ -8,13 +8,17 @@ const NavBar=({onSearch})=>{
        
         return(
          setSearch(evt.target.value)
-        
+                 
         )
     }
     const handleKeyDown=(evt)=>{
-       if (evt.key === "Enter"){
+        console.log(evt.key)
+       if (evt.key === "Enter" ){
              onSearch(search)
        }
+       if (evt.key==='Backspace' && search.length<2){
+        onSearch('')
+    }
     }
     const[search,setSearch]=useState("")
     return(
@@ -23,6 +27,7 @@ const NavBar=({onSearch})=>{
            <input type="text" placeholder="Busca Evento"
            onChange={handleBuscar} value={search}
            onKeyDown={handleKeyDown}/>
+           
            
         </div>
     )

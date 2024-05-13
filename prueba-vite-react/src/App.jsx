@@ -3,7 +3,9 @@ import './App.css'
 import NavBar from './components/Navbar/NavBar'
 import './components/Eventos/Eventos'
 import Eventos from './components/Eventos/Eventos'
+import './components/SignUpForm/SignUpForm'
 import { useState } from 'react'
+import SignUpForm from './components/SignUpForm/SignUpForm'
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
     
       <NavBar onSearch={handleNavBarSearch}/>
       <Eventos Busqueda={valorBuscado}/>
+      <SignUpForm/>
 
      
     </>

@@ -1,5 +1,8 @@
+html,body{
+  background-color: grey;
+}
 #root {
- 
+  background-color:gray ;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
